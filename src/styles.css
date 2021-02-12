@@ -13,11 +13,11 @@ body {
 }
 
 .bg-pry {
-  background: green !important;
+  background: #008000 !important;
 }
 
 .bg-pry-light {
-  background: rgba(0, 128, 0, 0.102) !important;
+  background: #0080001a !important;
 }
 
 .bg-black {
@@ -25,20 +25,20 @@ body {
 }
 
 .text-pry {
-  color: green !important;
+  color: #008000 !important;
 }
 
 .ant-btn-primary {
-  background: green !important;
-  border-color: green;
+  background: #008000 !important;
+  border-color: #008000;
 }
 
 .ant-btn-primary:hover {
-  border-color: green;
+  border-color: #008000;
 }
 
 a {
-  color: green;
+  color: #008000;
 }
 
 a:hover {
@@ -81,7 +81,7 @@ p {
 
 @media screen and (min-width: 992px) {
   .header a.active {
-    border-bottom: 3px solid green;
+    border-bottom: 3px solid #008000;
     bottom: -3px;
   }
 }
@@ -244,7 +244,7 @@ p {
 }
 
 .footer a.links:hover {
-  color: green;
+  color: #008000;
 }
 
 .footer .subscribe-button:hover {
@@ -259,7 +259,7 @@ p {
 }
 
 .footer a.dev {
-  color: green;
+  color: #008000;
   font-size: 16px;
 }
 
@@ -268,6 +268,6 @@ p {
 }
 
 .footer input:focus, .footer input:hover {
-  border-color: green;
+  border-color: #008000;
   box-shadow: none;
 }

@@ -6,7 +6,7 @@ const LatestOpportunities = () => {
 	return (
 		<div
 			className="container-fluid jumbotron posts-opportunities"
-			style={{ background: 'linear-gradient(rgba(128, 128, 128,.1), rgba(128,128,128,0.1)), url("/assets/bg-1.jpg")' }}
+			style={{ background: 'linear-gradient(rgba(0, 128, 0, 0.1), rgba(0,128,0,0.1))' }}
 		>
 			<div className="container py-5">
 				<Row className="d-flex justify-content-center justify-content-lg-between">
