@@ -1,0 +1,303 @@
+$pry-color: hsl(120, 100%, 25%);
+$pry-color-var: hsl(118, 100%, 33%);
+$pry-color-light: rgba(0, 128, 0, 0.102);
+
+/***********************
+
+    GENERAL SETUP
+
+************************/
+
+body {
+	font-family: "DM Sans", sans-serif !important;
+	font-size: 16px;
+}
+
+.bg-white {
+	background: #fff;
+}
+
+.bg-pry {
+	background: $pry-color !important;
+}
+
+.bg-pry-light {
+	background: $pry-color-light !important;
+}
+
+.bg-black {
+	background: #000;
+}
+
+.text-pry {
+	color: $pry-color !important;
+}
+
+.ant-btn-primary {
+	background: $pry-color !important;
+	border-color: $pry-color;
+
+	&:hover {
+		border-color: $pry-color;
+	}
+}
+
+a {
+	color: $pry-color;
+
+	&:hover {
+		color: $pry-color-var;
+	}
+}
+
+p {
+	font-size: 16px !important;
+}
+
+/***********************
+
+    HEADER
+
+************************/
+
+.header {
+	.navbar-brand {
+		padding: 15px 0;
+
+		.ri-logo {
+			width: 50px;
+		}
+	}
+
+	.collapse {
+		height: calc(100vh - 75px);
+		@media screen and (min-width: 992px) {
+			height: 80px;
+		}
+	}
+
+	a {
+		font-size: 16px;
+		display: inline-block;
+		position: relative;
+		transition: ease-in 300ms;
+
+		@media screen and (min-width: 992px) {
+			&.active {
+				border-bottom: 3px solid $pry-color;
+				bottom: -3px;
+			}
+		}
+	}
+}
+
+/***********************
+
+        USER LOGIN
+
+************************/
+
+.user-login {
+	height: 100vh;
+	background-attachment: fixed !important;
+	background-size: cover !important;
+	background-position: 50% 80% !important;
+
+	.login-form-forgot {
+		float: right;
+	}
+
+	.ant-col-rtl .login-form-forgot {
+		float: left;
+	}
+
+	.login-form-button {
+		width: 100%;
+	}
+}
+
+/***********************
+
+    HOMEPAGE SLIDER
+
+************************/
+
+.slider {
+	.slider__slide {
+		height: 600px;
+		color: #fff;
+		text-align: center;
+
+		.slider__slide-bg {
+			background-position: center 50% !important;
+			background-size: cover !important;
+		}
+
+		@media screen and (min-width: 992px) {
+			h3 {
+				font-size: 35px;
+			}
+		}
+	}
+
+	.slick-dots-right {
+		right: 15px;
+	}
+
+	.slick-dots li button:before {
+		left: -8px;
+		content: "";
+	}
+}
+
+/***********************
+
+    ABOUT US
+
+************************/
+.about-us {
+	h2 {
+		font-size: 40px;
+	}
+}
+
+/***********************
+
+	    LATEST BLOG
+
+************************/
+
+.latest-blog {
+	img {
+		height: 120px;
+		object-fit: cover;
+		object-position: 50% 30%;
+	}
+
+	p {
+		font-size: 14px !important;
+	}
+
+	a {
+		position: relative;
+		padding: 0 0.5em;
+		color: #fff;
+		display: inline-block;
+		z-index: 3;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			background-color: #000;
+			z-index: -10;
+			-webkit-transition: all 0.1s linear;
+			-moz-transition: all 0.1s linear;
+			transition: all 0.1s linear;
+		}
+
+		&:hover {
+			cursor: pointer;
+			&:after {
+				height: 100%;
+			}
+		}
+	}
+}
+
+/***********************
+
+	LATEST OPPORTUNITIES
+
+************************/
+
+.latest-opportunities {
+	.ant-card-body {
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+/***********************
+
+	TESTIMONIALS
+
+************************/
+
+.testimonials {
+	overflow-x: hidden !important;
+
+	.testimonial {
+		height: 120px;
+	}
+
+	.footer {
+		height: 20px;
+		line-height: 20px;
+	}
+
+	.slick-slide {
+		overflow-x: hidden !important;
+	}
+
+	.slick-slider {
+		.slick-next,
+		.slick-prev {
+			display: none !important;
+		}
+	}
+
+	.slick-dots {
+		bottom: -40px;
+	}
+}
+
+/***********************
+
+		FOOTER
+
+************************/
+.footer {
+	a.links {
+		color: #333;
+		font-size: 14px;
+
+		&:hover {
+			color: $pry-color;
+		}
+	}
+
+	.subscribe-button {
+		&:hover {
+			background: $pry-color-var !important;
+		}
+	}
+
+	@media screen and (min-width: 576px) and (max-width: 1024px) {
+		.ant-form-item-control-input-content {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	a.dev {
+		color: $pry-color;
+		font-size: 16px;
+
+		&:hover {
+			color: $pry-color-var;
+		}
+	}
+
+	input {
+		&:focus,
+		&:hover {
+			border-color: $pry-color;
+			box-shadow: none;
+		}
+	}
+}

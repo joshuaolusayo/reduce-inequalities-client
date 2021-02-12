@@ -1,0 +1,273 @@
+/***********************
+
+    GENERAL SETUP
+
+************************/
+body {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 16px;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-pry {
+  background: green !important;
+}
+
+.bg-pry-light {
+  background: rgba(0, 128, 0, 0.102) !important;
+}
+
+.bg-black {
+  background: #000;
+}
+
+.text-pry {
+  color: green !important;
+}
+
+.ant-btn-primary {
+  background: green !important;
+  border-color: green;
+}
+
+.ant-btn-primary:hover {
+  border-color: green;
+}
+
+a {
+  color: green;
+}
+
+a:hover {
+  color: #06a800;
+}
+
+p {
+  font-size: 16px !important;
+}
+
+/***********************
+
+    HEADER
+
+************************/
+.header .navbar-brand {
+  padding: 15px 0;
+}
+
+.header .navbar-brand .ri-logo {
+  width: 50px;
+}
+
+.header .collapse {
+  height: calc(100vh - 75px);
+}
+
+@media screen and (min-width: 992px) {
+  .header .collapse {
+    height: 80px;
+  }
+}
+
+.header a {
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+  transition: ease-in 300ms;
+}
+
+@media screen and (min-width: 992px) {
+  .header a.active {
+    border-bottom: 3px solid green;
+    bottom: -3px;
+  }
+}
+
+/***********************
+
+        USER LOGIN
+
+************************/
+.user-login {
+  height: 100vh;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: 50% 80% !important;
+}
+
+.user-login .login-form-forgot {
+  float: right;
+}
+
+.user-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+
+.user-login .login-form-button {
+  width: 100%;
+}
+
+/***********************
+
+    HOMEPAGE SLIDER
+
+************************/
+.slider .slider__slide {
+  height: 600px;
+  color: #fff;
+  text-align: center;
+}
+
+.slider .slider__slide .slider__slide-bg {
+  background-position: center 50% !important;
+  background-size: cover !important;
+}
+
+@media screen and (min-width: 992px) {
+  .slider .slider__slide h3 {
+    font-size: 35px;
+  }
+}
+
+.slider .slick-dots-right {
+  right: 15px;
+}
+
+.slider .slick-dots li button:before {
+  left: -8px;
+  content: "";
+}
+
+/***********************
+
+    ABOUT US
+
+************************/
+.about-us h2 {
+  font-size: 40px;
+}
+
+/***********************
+
+	    LATEST BLOG
+
+************************/
+.latest-blog img {
+  height: 120px;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.latest-blog p {
+  font-size: 14px !important;
+}
+
+.latest-blog a {
+  position: relative;
+  padding: 0 0.5em;
+  color: #fff;
+  display: inline-block;
+  z-index: 3;
+}
+
+.latest-blog a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #000;
+  z-index: -10;
+  transition: all 0.1s linear;
+}
+
+.latest-blog a:hover {
+  cursor: pointer;
+}
+
+.latest-blog a:hover:after {
+  height: 100%;
+}
+
+/***********************
+
+	LATEST OPPORTUNITIES
+
+************************/
+.latest-opportunities .ant-card-body:hover {
+  color: #000;
+}
+
+/***********************
+
+	TESTIMONIALS
+
+************************/
+.testimonials {
+  overflow-x: hidden !important;
+}
+
+.testimonials .testimonial {
+  height: 120px;
+}
+
+.testimonials .footer {
+  height: 20px;
+  line-height: 20px;
+}
+
+.testimonials .slick-slide {
+  overflow-x: hidden !important;
+}
+
+.testimonials .slick-slider .slick-next,
+.testimonials .slick-slider .slick-prev {
+  display: none !important;
+}
+
+.testimonials .slick-dots {
+  bottom: -40px;
+}
+
+/***********************
+
+		FOOTER
+
+************************/
+.footer a.links {
+  color: #333;
+  font-size: 14px;
+}
+
+.footer a.links:hover {
+  color: green;
+}
+
+.footer .subscribe-button:hover {
+  background: #06a800 !important;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .footer .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer a.dev {
+  color: green;
+  font-size: 16px;
+}
+
+.footer a.dev:hover {
+  color: #06a800;
+}
+
+.footer input:focus, .footer input:hover {
+  border-color: green;
+  box-shadow: none;
+}
