@@ -165,6 +165,10 @@ p {
 	    LATEST BLOG
 
 ************************/
+.posts-opportunities {
+  background-repeat: repeat;
+}
+
 .latest-blog img {
   height: 120px;
   object-fit: cover;
