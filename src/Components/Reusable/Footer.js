@@ -35,18 +35,18 @@ const Footer = () => {
 					<Col xs={24} sm={12} lg={8} className="mt-5 mt-sm-0">
 						<h5 className="mb-4 text-pry">Social Links</h5>
 						<div className="d-flex flex-column">
-							<Link className="mb-3 links" to="/">
+							<a className="mb-3 links" href="https://www.facebook.com/oyeleke.oluwasayo">
 								Facebook
-							</Link>
-							<Link className="mb-3 links" to="/">
+							</a>
+							<a className="mb-3 links" href="https://www.instagram.com/joshuaolusayo">
 								Instagram
-							</Link>
-							<Link className="mb-3 links" to="/">
+							</a>
+							<a className="mb-3 links" href="https://www.linkedin.com">
 								LinkedIn
-							</Link>
-							<Link className="mb-3 links" to="/">
+							</a>
+							<a className="mb-3 links" href="https://www.twitter.com/joshuaolusayo">
 								Twitter
-							</Link>
+							</a>
 						</div>
 					</Col>
 					<Col xs={20} sm={16} md={12} lg={8} className="mt-5 mt-lg-0">
@@ -79,14 +79,15 @@ const Footer = () => {
 					</Col>
 				</Row>
 			</div>
-			<div className="container-fluid py-5 mt-5 bg-black text-light text-center">
-				Designed by{" "}
-				<a className="dev" href="mailto:oyelekeoluwasayo@gmail.com">
-					Joshua Oyeleke
-				</a>
-				. All rights reserved
+			<div className="container-fluid py-5 mt-5 bg-black text-light text-center footer-details">
+				<span>© 2021. All rights reserved</span>
 				<br />
-                © Copyright 2021
+				<span>
+					Designed by{" "}
+					<a className="dev" href="mailto:oyelekeoluwasayo@gmail.com">
+						Joshua Oyeleke
+					</a>
+				</span>
 			</div>
 		</div>
 	);

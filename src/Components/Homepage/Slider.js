@@ -6,7 +6,7 @@ const Slider = () => {
 		<Carousel
 			effect="fade"
 			autoplay={true}
-			autoplaySpeed={3000}
+			autoplaySpeed={5000}
 			dotPosition="right"
 			infinite={true}
 			className="mb-5 slider"

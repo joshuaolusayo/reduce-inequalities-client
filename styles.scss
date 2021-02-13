@@ -44,6 +44,9 @@ body {
 
 a {
 	color: $pry-color;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 
 	&:hover {
 		color: $pry-color-var;
@@ -80,12 +83,23 @@ p {
 		font-size: 16px;
 		display: inline-block;
 		position: relative;
-		transition: ease-in 300ms;
 
 		@media screen and (min-width: 992px) {
+			top: 0px;
+
+			&:hover {
+				top: -3px;
+				color: $pry-color !important;
+
+				&.dropdown-item,
+				&.navbar-brand {
+					top: 0;
+				}
+			}
+
 			&.active {
 				border-bottom: 3px solid $pry-color;
-				bottom: -3px;
+				top: 3px;
 			}
 		}
 	}
@@ -284,12 +298,18 @@ p {
 		}
 	}
 
+	&-details {
+		span {
+			line-height: 30px;
+		}
+	}
+
 	a.dev {
-		color: $pry-color;
+		color: $pry-color-var;
 		font-size: 16px;
 
 		&:hover {
-			color: $pry-color-var;
+			color: #fff;
 		}
 	}
 

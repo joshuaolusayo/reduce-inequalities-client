@@ -39,6 +39,7 @@ body {
 
 a {
   color: #008000;
+  transition: all 0.3s linear;
 }
 
 a:hover {
@@ -76,13 +77,22 @@ p {
   font-size: 16px;
   display: inline-block;
   position: relative;
-  transition: ease-in 300ms;
 }
 
 @media screen and (min-width: 992px) {
+  .header a {
+    top: 0px;
+  }
+  .header a:hover {
+    top: -3px;
+    color: #008000 !important;
+  }
+  .header a:hover.dropdown-item, .header a:hover.navbar-brand {
+    top: 0;
+  }
   .header a.active {
     border-bottom: 3px solid #008000;
-    bottom: -3px;
+    top: 3px;
   }
 }
 
@@ -258,13 +268,17 @@ p {
   }
 }
 
+.footer-details span {
+  line-height: 30px;
+}
+
 .footer a.dev {
-  color: #008000;
+  color: #06a800;
   font-size: 16px;
 }
 
 .footer a.dev:hover {
-  color: #06a800;
+  color: #fff;
 }
 
 .footer input:focus, .footer input:hover {
