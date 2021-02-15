@@ -354,6 +354,7 @@ p {
 
 ***********************************************/
 .blog .banner {
+  background-color: #dfdbe5;
   background-size: cover !important;
   background-position: 50% 40% !important;
 }
@@ -371,12 +372,16 @@ p {
 		LATEST
 
 ************************/
+.latest h5 {
+  font-size: 16px;
+}
+
 .latest .tag {
   position: absolute;
   top: 250px;
   left: 20px;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .latest .card-title {
@@ -509,4 +514,49 @@ p {
 .review .ant-input:focus {
   border-color: #008000;
   box-shadow: none;
+}
+
+/**********************************************
+
+			SIGN UP PAGE
+
+***********************************************/
+.auth-header {
+  position: fixed;
+  z-index: 10;
+}
+
+.auth-header .ri-logo {
+  width: 40px;
+}
+
+.registration {
+  padding-top: 66px;
+}
+
+.registration .fixed {
+  height: calc(100vh - 66px);
+  overflow: hidden;
+  position: fixed;
+  background-size: cover !important;
+  background-position: 50% 10% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .registration__form {
+    position: absolute;
+    height: calc(100vh - 66px);
+    overflow: scroll;
+    left: 50%;
+  }
+}
+
+.auth-footer {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .auth-footer {
+    top: 100vh;
+  }
 }

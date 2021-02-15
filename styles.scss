@@ -154,7 +154,7 @@ p {
 
 	button:focus {
 		box-shadow: none;
-		color: rgba(0,0,0,.5);
+		color: rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -381,7 +381,7 @@ p {
 
 .blog {
 	.banner {
-		// background-color: #dfdbe5;
+		background-color: #dfdbe5;
 		// background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2306a800' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 		background-size: cover !important;
 		background-position: 50% 40% !important;
@@ -403,12 +403,16 @@ p {
 ************************/
 
 .latest {
+	h5 {
+		font-size: 16px;
+	}
+
 	.tag {
 		position: absolute;
 		top: 250px;
 		left: 20px;
 		border-radius: 30px;
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.card-title {
@@ -530,5 +534,48 @@ p {
 	.ant-input:focus {
 		border-color: $pry-color;
 		box-shadow: none;
+	}
+}
+
+/**********************************************
+
+			SIGN UP PAGE
+
+***********************************************/
+.auth-header {
+	position: fixed;
+	z-index: 10;
+
+	.ri-logo {
+		width: 40px;
+	}
+}
+
+.registration {
+	padding-top: 66px;
+
+	.fixed {
+		height: calc(100vh - 66px);
+		overflow: hidden;
+		position: fixed;
+		background-size: cover !important;
+		background-position: 50% 10% !important;
+	}
+
+	@media screen and (min-width: 768px) {
+		&__form {
+			position: absolute;
+			height: calc(100vh - 66px);
+			overflow: scroll;
+			left: 50%;
+		}
+	}
+}
+
+.auth-footer {
+	position: relative;
+	
+	@media screen and (min-width: 768px) {
+		top: 100vh;
 	}
 }

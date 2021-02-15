@@ -7,10 +7,10 @@ const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 
 	const checkScroll = () => {
-		if (!scrolled && window.pageYOffset > 100) {
+		if (!scrolled && window.pageYOffset > 300) {
 			setScrolled(true);
 			console.log("Mounting");
-		} else if (scrolled && window.pageYOffset <= 100) {
+		} else if (scrolled && window.pageYOffset <= 300) {
 			setScrolled(false);
 		}
 	};
