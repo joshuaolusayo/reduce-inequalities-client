@@ -5,7 +5,7 @@ import { Row, Col, Divider, Card } from "antd";
 const LatestOpportunities = () => {
 	return (
 		<div
-			className="container-fluid jumbotron posts-opportunities"
+			className="container-fluid jumbotron"
 			style={{ background: 'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/assets/funky-lines.png")' }}
 		>
 			<div className="container py-5">

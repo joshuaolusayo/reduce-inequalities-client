@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 const Header = () => {
 	const [clicked, setClicked] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	const checkScroll = () => {
+		if (!scrolled && window.pageYOffset > 100) {
+			setScrolled(true);
+			console.log("Mounting");
+		} else if (scrolled && window.pageYOffset <= 100) {
+			setScrolled(false);
+		}
+	};
 
 	useEffect(() => {
 		let body = document.documentElement;
@@ -12,13 +23,17 @@ const Header = () => {
 			body.style.overflow = "scroll";
 		}
 
+		window.addEventListener("scroll", checkScroll);
+
 		return () => {
 			body.style.overflow = "scroll";
+			window.removeEventListener("scroll", checkScroll);
 		};
-	}, [clicked]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [clicked, scrolled]);
 
 	return (
-		<div className="container-fluid header shadow-lg px-0">
+		<div className={`container-fluid header shadow-lg px-0 ${scrolled ? "header__fixed" : ""}`} id="header-nav">
 			<div className="container navbar-light px-0">
 				<nav className="navbar navbar-expand-lg justify-content-between align-items-center py-0">
 					<Link className="navbar-brand" to="/">
@@ -45,44 +60,43 @@ const Header = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link mx-4 py-4" to="/">
+								<Link className="nav-link mx-4 py-4" to="/blog">
 									Blog
 								</Link>
 							</li>
 							<li className="nav-item dropdown text-center text-lg-auto">
-								<Link
-									className="nav-link mx-4 py-4 dropdown-toggle"
-									to="/"
+								<button
+									className="nav-link mx-4 py-4 dropdown-toggle btn"
 									id="opportunitiesId"
 									data-toggle="dropdown"
-									aria-haspopup="true"
+									popup="true"
 									aria-expanded="false"
 								>
 									Opportunities for you
-								</Link>
-								<div className="dropdown-menu" aria-labelledby="opportunitiesId">
-									<Link className="dropdown-item" to="/">
+								</button>
+								<div className="dropdown-menu mx-4" aria-labelledby="opportunitiesId">
+									<NavHashLink to="/blog/#scholarships" className="w-100 dropdown-item d-block">
 										Scholarships
-									</Link>
-									<Link className="dropdown-item" to="/">
+									</NavHashLink>
+									<NavHashLink to="/blog/#empowerment" className="w-100 dropdown-item d-block">
 										Empowerment
-									</Link>
-									<Link className="dropdown-item" to="/">
+									</NavHashLink>
+									<NavHashLink to="/blog/#jobs" className="w-100 dropdown-item d-block">
 										Jobs
-									</Link>
+									</NavHashLink>
 								</div>
 							</li>
 							<li className="nav-item dropdown text-center text-lg-auto">
-								<Link
-									className="nav-link dropdown-toggle"
+								<button
+									className="nav-link dropdown-toggle btn"
 									to="/"
 									id="profileId"
 									data-toggle="dropdown"
-									aria-haspopup="true"
+									popup="true"
 									aria-expanded="false"
 								>
 									Profile
-								</Link>
+								</button>
 								<div className="dropdown-menu" aria-labelledby="profileId">
 									<Link className="dropdown-item" to="/">
 										View Profile

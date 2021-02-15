@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+*::selection {
+  background: #008000;
+  color: #fff;
+}
+
 .bg-white {
   background: #fff;
 }
@@ -35,6 +40,7 @@ body {
 
 .ant-btn-primary:hover {
   border-color: #008000;
+  background: #06a800 !important;
 }
 
 a {
@@ -55,12 +61,40 @@ p {
     HEADER
 
 ************************/
+@keyframes animate {
+  from {
+    opacity: 0;
+    background: transparent;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    background: white;
+    transform: translateY(0px);
+  }
+}
+
+.header {
+  background: white;
+}
+
 .header .navbar-brand {
   padding: 15px 0;
 }
 
 .header .navbar-brand .ri-logo {
   width: 50px;
+}
+
+.header__fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  animation: animate 500ms;
+}
+
+.header__fixed + div {
+  margin-top: 80px;
 }
 
 .header .collapse {
@@ -73,27 +107,53 @@ p {
   }
 }
 
-.header a {
+.header a,
+.header button {
   font-size: 16px;
   display: inline-block;
   position: relative;
+  transition: all 0.3s linear;
 }
 
 @media screen and (min-width: 992px) {
-  .header a {
+  .header a,
+  .header button {
     top: 0px;
   }
-  .header a:hover {
+  .header a:hover,
+  .header button:hover {
     top: -3px;
     color: #008000 !important;
   }
-  .header a:hover.dropdown-item, .header a:hover.navbar-brand {
+  .header a:hover.dropdown-item, .header a:hover.navbar-brand,
+  .header button:hover.dropdown-item,
+  .header button:hover.navbar-brand {
     top: 0;
   }
-  .header a.active {
+  .header a.active,
+  .header button.active {
     border-bottom: 3px solid #008000;
     top: 3px;
   }
+}
+
+.header a.dropdown-item.active, .header a.dropdown-item:active,
+.header button.dropdown-item.active,
+.header button.dropdown-item:active {
+  background-color: transparent;
+  color: #212529;
+  border-bottom: 0;
+}
+
+.header a.dropdown-item.active:hover,
+.header button.dropdown-item.active:hover {
+  top: 3px;
+  background: #f8f9fa;
+}
+
+.header button:focus {
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /***********************
@@ -136,9 +196,15 @@ p {
   background-size: cover !important;
 }
 
+.slider .slider__slide h3 {
+  font-size: 30px;
+  line-height: 43px;
+}
+
 @media screen and (min-width: 992px) {
   .slider .slider__slide h3 {
-    font-size: 35px;
+    font-size: 45px;
+    line-height: 60px;
   }
 }
 
@@ -165,10 +231,6 @@ p {
 	    LATEST BLOG
 
 ************************/
-.posts-opportunities {
-  background-repeat: repeat;
-}
-
 .latest-blog img {
   height: 120px;
   object-fit: cover;
@@ -261,10 +323,6 @@ p {
   color: #008000;
 }
 
-.footer .subscribe-button:hover {
-  background: #06a800 !important;
-}
-
 @media screen and (min-width: 576px) and (max-width: 1024px) {
   .footer .ant-form-item-control-input-content {
     display: flex;
@@ -286,6 +344,169 @@ p {
 }
 
 .footer input:focus, .footer input:hover {
+  border-color: #008000;
+  box-shadow: none;
+}
+
+/**********************************************
+
+			BLOG SECTION
+
+***********************************************/
+.blog .banner {
+  background-size: cover !important;
+  background-position: 50% 40% !important;
+}
+
+.blog .banner h3 {
+  line-height: 40px;
+}
+
+.clamp-lines__button {
+  display: none;
+}
+
+/***********************
+
+		LATEST
+
+************************/
+.latest .tag {
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.latest .card-title {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.latest img {
+  object-fit: cover;
+}
+
+.latest .img_1 {
+  height: 300px;
+}
+
+.latest .featured__img {
+  height: 100px;
+}
+
+.latest .featured h2 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.latest .featured .col-h {
+  height: 150px;
+}
+
+.latest .featured .date {
+  font-size: 12px !important;
+}
+
+.latest .featured .more {
+  font-size: 14px;
+}
+
+/***********************
+
+		SCHOLARSHIPS
+		EMPOWERMENTS
+
+************************/
+@media screen and (min-width: 768px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 350px;
+  }
+}
+
+.scholarships img,
+.empowerments img,
+.jobs img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.scholarships .date,
+.empowerments .date,
+.jobs .date {
+  font-size: 12px !important;
+}
+
+.scholarships .clamp-lines h4,
+.empowerments .clamp-lines h4,
+.jobs .clamp-lines h4 {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.scholarships .clamp-lines p,
+.empowerments .clamp-lines p,
+.jobs .clamp-lines p {
+  font-size: 14px !important;
+}
+
+.scholarships a,
+.empowerments a,
+.jobs a {
+  font-size: 14px !important;
+}
+
+/***********************
+
+		REVIEW
+
+************************/
+.review {
+  background-color: #ffffff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23008000' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.review .ant-form-horizontal .ant-form-item-label {
+  display: none;
+}
+
+.review .ant-form-item .ant-mentions,
+.review .ant-form-item textarea.ant-input {
+  height: 150px;
+  resize: none;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.review .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: center;
+}
+
+.review .ant-input:hover,
+.review .ant-input:focus {
   border-color: #008000;
   box-shadow: none;
 }
