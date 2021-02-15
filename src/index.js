@@ -4,7 +4,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 // Components
-import UserLogin from "./Components/UserLogin";
+import UserLogin from "./Components/Login";
+import UserSignUp from "./Components/SignUp";
 import Header from "./Components/Homepage";
 import BlogHomepage from "./Components/Blog/Homepage";
 import BlogArticle from "./Components/Blog/Article";
@@ -16,6 +17,7 @@ ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<Route exact path="/login" component={UserLogin} />
+			<Route exact path="/signUp" component={UserSignUp} />
 			<Route exact path="/" component={Header} />
 			<Route exact path="/blog" component={BlogHomepage} />
 			<Route exact path="/blog/article" component={BlogArticle} />
