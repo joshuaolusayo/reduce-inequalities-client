@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import { Row, Col, Divider, Form, Input, Button } from "antd";
 
 const Footer = () => {
@@ -18,18 +19,18 @@ const Footer = () => {
 							<Link className="mb-3 links" to="/">
 								Homepage
 							</Link>
-							<Link className="mb-3 links" to="/">
+							<Link className="mb-3 links" to="/blog">
 								Blog
 							</Link>
-							<Link className="mb-3 links" to="/">
-								Notifications
-							</Link>
-							<Link className="mb-3 links" to="/">
+							<NavHashLink to="/blog/#scholarships" className="mb-3 links">
 								Scholarships
-							</Link>
-							<Link className="mb-3 links" to="/">
-								Jobs
-							</Link>
+							</NavHashLink>
+							<NavHashLink to="/blog/#empowerments" className="mb-3 links">
+								Empowerments
+							</NavHashLink>
+							<NavHashLink to="/blog/#jobs" className="mb-3 links">
+								Job
+							</NavHashLink>
 						</div>
 					</Col>
 					<Col xs={24} sm={12} lg={8} className="mt-5 mt-sm-0">
@@ -71,7 +72,7 @@ const Footer = () => {
 							</Form.Item>
 
 							<Form.Item className="mx-md-auto">
-								<Button type="primary" htmlType="submit" className="subscribe-button">
+								<Button type="primary" htmlType="submit" className="rounded">
 									Subscribe
 								</Button>
 							</Form.Item>

@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 // Components
 import UserLogin from "./Components/UserLogin";
 import Header from "./Components/Homepage";
+import BlogHomepage from "./Components/Blog/Homepage";
+import BlogArticle from "./Components/Blog/Article";
 
 import "antd/dist/antd.css";
 import "./styles.css";
@@ -15,6 +17,8 @@ ReactDOM.render(
 		<BrowserRouter>
 			<Route exact path="/login" component={UserLogin} />
 			<Route exact path="/" component={Header} />
+			<Route exact path="/blog" component={BlogHomepage} />
+			<Route exact path="/blog/article" component={BlogArticle} />
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")
