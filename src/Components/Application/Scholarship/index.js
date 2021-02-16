@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../Reusable/Header";
-import ArticleDetails from "./ArticleDetails";
+import Details from "../Details";
 import Review from "../../Reusable/Review";
 import Footer from "../../Reusable/Footer";
 import BackToTop from "../../Reusable/BackToTop";
 
-const BlogArticle = () => {
-	const [location] = useState(window.location.href);
+const Scholarship = () => {
+    const [location] = useState(window.location.href);
 	useEffect(() => {
+		console.log(location);
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
 		});
 	}, [location]);
-	
+
 	return (
 		<div>
 			<Header />
-			<ArticleDetails />
+			<Details />
 			<Review />
 			<Footer />
 			<BackToTop />
@@ -25,4 +26,4 @@ const BlogArticle = () => {
 	);
 };
 
-export default BlogArticle;
+export default Scholarship;

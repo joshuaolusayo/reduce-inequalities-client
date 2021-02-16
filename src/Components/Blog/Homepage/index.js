@@ -13,12 +13,12 @@ import BackToTop from "../../Reusable/BackToTop";
 const BlogHomepage = () => {
 	const [location] = useState(window.location.href);
 	useEffect(() => {
-		console.log(location);
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
 		});
 	}, [location]);
+	
 	return (
 		<div className="blog">
 			<Header />

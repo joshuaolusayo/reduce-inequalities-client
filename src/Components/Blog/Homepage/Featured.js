@@ -11,7 +11,7 @@ const Featured = () => {
 				<h5 className="text-uppercase font-weight-bold mb-3">FEATURED</h5>
 				<Row className="justify-content-between mb-4">
 					<Col xs={12} sm={10} md={8} className="pr-1 col-h">
-						<img className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
+						<img loading="lazy" className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
 					</Col>
 					<Col xs={12} sm={14} md={16} className="font-weight-bold pl-1 col-h d-flex flex-column justify-content-between">
 						<ClampLines
@@ -26,14 +26,14 @@ const Featured = () => {
 							innerElement="h2"
 						/>
 						<p className="text-muted font-weight-bold date mb-0">Nov 23, 2020</p>
-						<Link to="/blog" className="more">
+						<Link to="/blog" className="more hover-left">
 							Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 						</Link>
 					</Col>
 				</Row>
 				<Row className="justify-content-between mb-4">
 					<Col xs={12} sm={10} md={8} className="pr-1 col-h">
-						<img className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
+						<img loading="lazy" className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
 					</Col>
 					<Col xs={12} sm={14} md={16} className="font-weight-bold pl-1 col-h d-flex flex-column justify-content-between">
 						<ClampLines
@@ -48,14 +48,14 @@ const Featured = () => {
 							innerElement="h2"
 						/>
 						<p className="text-muted font-weight-bold date mb-0">Nov 23, 2020</p>
-						<Link to="/blog" className="more">
+						<Link to="/blog" className="more hover-left">
 							Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 						</Link>
 					</Col>
 				</Row>
 				<Row className="justify-content-between mb-4">
 					<Col xs={12} sm={10} md={8} className="pr-1 col-h">
-						<img className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
+						<img loading="lazy" className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
 					</Col>
 					<Col xs={12} sm={14} md={16} className="font-weight-bold pl-1 col-h d-flex flex-column justify-content-between">
 						<ClampLines
@@ -70,14 +70,14 @@ const Featured = () => {
 							innerElement="h2"
 						/>
 						<p className="text-muted font-weight-bold date mb-0">Nov 23, 2020</p>
-						<Link to="/blog" className="more">
+						<Link to="/blog" className="more hover-left">
 							Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 						</Link>
 					</Col>
 				</Row>
 				<Row className="justify-content-between mb-4">
 					<Col xs={12} sm={10} md={8} className="pr-1 col-h">
-						<img className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
+						<img loading="lazy" className="w-100 h-100 featured__img" src="/assets/smiling-kid-1.jpg" alt="Smiling kid" />
 					</Col>
 					<Col xs={12} sm={14} md={16} className="font-weight-bold pl-1 col-h d-flex flex-column justify-content-between">
 						<ClampLines
@@ -92,7 +92,7 @@ const Featured = () => {
 							innerElement="h2"
 						/>
 						<p className="text-muted font-weight-bold date mb-0">Nov 23, 2020</p>
-						<Link to="/blog" className="more">
+						<Link to="/blog" className="more hover-left">
 							Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 						</Link>
 					</Col>
