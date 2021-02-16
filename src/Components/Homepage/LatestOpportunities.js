@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Divider, Card } from "antd";
+import ClampLines from "react-clamp-lines";
 
 const LatestOpportunities = () => {
 	return (
@@ -14,49 +15,95 @@ const LatestOpportunities = () => {
 						<h2 className="font-weight-bold mb-4 mb-lg-5">LATEST BLOG POSTS</h2>
 						<Row>
 							<Col span={6}>
-								<img className="object-fit w-100 img-thumbnail rounded" src="/assets/smiling-kid-1.jpg" alt="Kid" />
+								<img loading="lazy" className="object-fit w-100 img-thumbnail rounded" src="/assets/smiling-kid-1.jpg" alt="Kid" />
 							</Col>
 							<Col span={18} className="pl-2 text-justify">
-								<h4 className="font-weight-bold">Register your child</h4>
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas amet placeat architecto veniam, earum cum
-									autem vero voluptatum ex aliquid.{" "}
-									<Link to="/" data-content="Read more">
-										Read more
-									</Link>
-								</p>
+								<ClampLines
+									text={"Apply for opportunity today"}
+									lines={2}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="h4"
+								/>
+
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
+								<Link className="half-filled-link" to="/" data-content="Read more">
+									Read more
+								</Link>
 							</Col>
 						</Row>
 						<Divider />
 						<Row>
 							<Col span={6}>
-								<img className="object-fit w-100 img-thumbnail rounded" src="/assets/rural-kids-1.jpg" alt="Kid" />
+								<img loading="lazy" className="object-fit w-100 img-thumbnail rounded" src="/assets/rural-kids-1.jpg" alt="Kid" />
 							</Col>
 							<Col span={18} className="pl-2 text-justify">
-								<h4 className="font-weight-bold">Register your child</h4>
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas amet placeat architecto veniam, earum cum
-									autem vero voluptatum ex aliquid.{" "}
-									<Link to="/" data-content="Read more">
-										Read more
-									</Link>
-								</p>
+								<ClampLines
+									text={"Apply for opportunity today"}
+									lines={2}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="h4"
+								/>
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
+								<Link className="half-filled-link" to="/" data-content="Read more">
+									Read more
+								</Link>
 							</Col>
 						</Row>
 						<Divider />
 						<Row>
 							<Col span={6}>
-								<img className="object-fit w-100 img-thumbnail rounded" src="/assets/smiling-kid-1.jpg" alt="Kid" />
+								<img loading="lazy" className="object-fit w-100 img-thumbnail rounded" src="/assets/smiling-kid-1.jpg" alt="Kid" />
 							</Col>
 							<Col span={18} className="pl-2 text-justify">
-								<h4 className="font-weight-bold">Register your child</h4>
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas amet placeat architecto veniam, earum cum
-									autem vero voluptatum ex aliquid.{" "}
-									<Link to="/" data-content="Read more">
-										Read more
-									</Link>
-								</p>
+								<ClampLines
+									text={"Apply for opportunity today"}
+									lines={2}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="h4"
+								/>
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
+								<Link className="half-filled-link" to="/" data-content="Read more">
+									Read more
+								</Link>
 							</Col>
 						</Row>
 					</Col>
@@ -66,17 +113,47 @@ const LatestOpportunities = () => {
 						<h3 className="font-weight-bold mb-4 mb-lg-5">LATEST OPPORTUNITIES</h3>
 						<Link className="d-block" to="/">
 							<Card className="text-pry">
-								2021 Agbami Scholarship is out... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sit!{" "}
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
 							</Card>
 						</Link>
 						<Link className="d-block" to="/">
 							<Card className="text-pry">
-								2021 Agbami Scholarship is out... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sit!{" "}
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
 							</Card>
 						</Link>
 						<Link className="d-block" to="/">
 							<Card className="text-pry">
-								2021 Agbami Scholarship is out... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sit!{" "}
+								<ClampLines
+									text={
+										"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod atque nobis iure totam distinctio, laborum corporis placeat animi magni ipsum delectus, officiis nisi! Numquam necessitatibus cumque laboriosam, libero quod veritatis quasi tempora sed corrupti illo fugit. Ipsa omnis quasi, eveniet laboriosam dolor quae repellendus repudiandae illum, ratione obcaecati deleniti reprehenderit veritatis veniam eum nemo totam accusantium expedita. Rerum, voluptatum."
+									}
+									lines={3}
+									ellipsis="..."
+									moreText=""
+									lessText="Collapse"
+									className=""
+									innerElement="p"
+								/>
 							</Card>
 						</Link>
 					</Col>

@@ -8,14 +8,14 @@ const ApplicationInfo = () => {
 		<>
 			<div className="col-md-8 px-0 px-md-2">
 				<h5 className="text-uppercase font-weight-bold mb-3">Important</h5>
-				<div class="card border-0 shadow-sm">
-					<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+				<div className="card border-0 shadow-sm">
+					<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 					<div className="tag bg-white text-pry px-3 py-2 shadow">Application</div>
 
-					<div class="card-body">
+					<div className="card-body">
 						<p className="text-muted font-weight-bold">Nov 23, 2020</p>
 
-						<h4 class="card-title font-weight-bold">Application details on this platform.</h4>
+						<h4 className="card-title font-weight-bold">Application details on this platform.</h4>
 
 						<ClampLines
 							text={
@@ -28,7 +28,7 @@ const ApplicationInfo = () => {
 							className="card-text"
 							innerElement="p"
 						/>
-						<Link to="/blog/article">
+						<Link className="hover-left" to="/blog/article">
 							Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 						</Link>
 					</div>

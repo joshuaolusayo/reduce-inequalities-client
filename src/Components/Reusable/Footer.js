@@ -29,7 +29,7 @@ const Footer = () => {
 								Empowerments
 							</NavHashLink>
 							<NavHashLink to="/blog/#jobs" className="mb-3 links">
-								Job
+								Jobs
 							</NavHashLink>
 						</div>
 					</Col>

@@ -6,15 +6,14 @@ import ClampLines from "react-clamp-lines";
 
 const Scholarships = () => {
 	return (
-		<div className="container-fluid scholarships" id="scholarships">
+		<div className="container-fluid scholarships pt-5" id="scholarships">
 			<div className="container mx-auto mb-5 px-0">
 				<h3 className="font-weight-bold">Scholarships</h3>
 				<Row className="justify-content-between">
-					{/* <div className="col-md-6 col-lg-4 px-0 mb-4"> */}
-					<div class="card border-0 shadow-sm mb-4">
-						<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+					<div className="card border-0 shadow-sm mb-4">
+						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
-						<div class="card-body">
+						<div className="card-body">
 							<p className="text-muted date">
 								<span className="font-weight-bold">Deadline:</span> Nov 23, 2020
 							</p>
@@ -42,16 +41,16 @@ const Scholarships = () => {
 								className="card-text"
 								innerElement="p"
 							/>
-							<Link to="/blog">
+							<Link className="hover-left" to="/scholarship">
 								Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 							</Link>
 						</div>
 					</div>
 
-					<div class="card border-0 shadow-sm mb-4">
-						<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+					<div className="card border-0 shadow-sm mb-4">
+						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
-						<div class="card-body">
+						<div className="card-body">
 							<p className="text-muted date">
 								<span className="font-weight-bold">Deadline:</span> Nov 23, 2020
 							</p>
@@ -79,16 +78,16 @@ const Scholarships = () => {
 								className="card-text"
 								innerElement="p"
 							/>
-							<Link to="/blog">
+							<Link className="hover-left" to="/scholarship">
 								Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 							</Link>
 						</div>
 					</div>
 
-					<div class="card border-0 shadow-sm mb-4">
-						<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+					<div className="card border-0 shadow-sm mb-4">
+						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
-						<div class="card-body">
+						<div className="card-body">
 							<p className="text-muted date">
 								<span className="font-weight-bold">Deadline:</span> Nov 23, 2020
 							</p>
@@ -116,16 +115,16 @@ const Scholarships = () => {
 								className="card-text"
 								innerElement="p"
 							/>
-							<Link to="/blog">
+							<Link className="hover-left" to="/scholarship">
 								Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 							</Link>
 						</div>
 					</div>
 
-					<div class="card border-0 shadow-sm mb-4">
-						<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+					<div className="card border-0 shadow-sm mb-4">
+						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
-						<div class="card-body">
+						<div className="card-body">
 							<p className="text-muted date">
 								<span className="font-weight-bold">Deadline:</span> Nov 23, 2020
 							</p>
@@ -153,16 +152,16 @@ const Scholarships = () => {
 								className="card-text"
 								innerElement="p"
 							/>
-							<Link to="/blog">
+							<Link className="hover-left" to="/scholarship">
 								Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 							</Link>
 						</div>
 					</div>
 
-					<div class="card border-0 shadow-sm mb-4">
-						<img class="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
+					<div className="card border-0 shadow-sm mb-4">
+						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
-						<div class="card-body">
+						<div className="card-body">
 							<p className="text-muted date">
 								<span className="font-weight-bold">Deadline:</span> Nov 23, 2020
 							</p>
@@ -190,12 +189,11 @@ const Scholarships = () => {
 								className="card-text"
 								innerElement="p"
 							/>
-							<Link to="/blog">
+							<Link className="hover-left" to="/scholarship">
 								Read more <ArrowRightOutlined style={{ position: "relative", top: "-3px" }} />
 							</Link>
 						</div>
 					</div>
-					{/* </div> */}
 				</Row>
 			</div>
 			<Divider />

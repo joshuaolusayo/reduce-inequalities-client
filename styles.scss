@@ -11,6 +11,7 @@ $pry-color-light: #0080001a;
 body {
 	font-family: "DM Sans", sans-serif !important;
 	font-size: 16px;
+	background: white;
 }
 
 *::selection {
@@ -48,15 +49,70 @@ body {
 	}
 }
 
+.ant-input:hover,
+.ant-input:focus {
+	border-color: $pry-color;
+	box-shadow: none;
+}
+
 a {
 	color: $pry-color;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	transition: all 0.3s linear;
+	position: relative;
 
 	&:hover {
 		color: $pry-color-var;
 	}
+}
+
+a.half-filled-link {
+	position: relative;
+	padding: 0 0.5em;
+	color: #fff;
+	display: inline-block;
+	z-index: 3;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		background-color: #008000;
+		z-index: -10;
+		-webkit-transition: all 0.1s linear;
+		-moz-transition: all 0.1s linear;
+		transition: all 0.1s linear;
+	}
+
+	&:hover {
+		cursor: pointer;
+		&:after {
+			height: 100%;
+		}
+	}
+}
+
+@keyframes left {
+	0% {
+		left: 0;
+	}
+
+	50% {
+		left: 8px;
+	}
+
+	100% {
+		left: 5px;
+	}
+}
+
+a.hover-left:hover {
+	animation: left 500ms;
+	left: 5px;
 }
 
 p {
@@ -104,6 +160,10 @@ p {
 		}
 	}
 
+	.navbar-toggler:focus {
+		outline-color: #008000;
+	}
+
 	.collapse {
 		height: calc(100vh - 75px);
 		@media screen and (min-width: 992px) {
@@ -120,12 +180,26 @@ p {
 		-moz-transition: all 0.3s linear;
 		transition: all 0.3s linear;
 
+		&:hover {
+			color: $pry-color !important;
+		}
+
+		&.dropdown-item.active,
+		&.dropdown-item:active {
+			background-color: transparent;
+			color: #212529;
+			border-bottom: 0;
+		}
+
+		&.dropdown-item.active:hover {
+			background: #f8f9fa;
+		}
+
 		@media screen and (min-width: 992px) {
 			top: 0px;
 
 			&:hover {
 				top: -3px;
-				color: $pry-color !important;
 
 				&.dropdown-item,
 				&.navbar-brand {
@@ -137,49 +211,30 @@ p {
 				border-bottom: 3px solid $pry-color;
 				top: 3px;
 			}
-		}
 
-		&.dropdown-item.active,
-		&.dropdown-item:active {
-			background-color: transparent;
-			color: #212529;
-			border-bottom: 0;
-		}
-
-		&.dropdown-item.active:hover {
-			top: 3px;
-			background: #f8f9fa;
+			&.dropdown-item.active:hover {
+				top: 3px;
+			}
 		}
 	}
 
-	button:focus {
+	@media screen and (max-width: 991px) {
+		.nav-item {
+			border-top: 1px solid $pry-color;
+
+			&.last {
+				border-bottom: 1px solid $pry-color;
+			}
+		}
+	}
+
+	.nav-item:focus {
+		outline: none;
+	}
+
+	.btn:focus {
 		box-shadow: none;
-		color: rgba(0, 0, 0, 0.5);
-	}
-}
-
-/***********************
-
-        USER LOGIN
-
-************************/
-
-.user-login {
-	height: 100vh;
-	background-attachment: fixed !important;
-	background-size: cover !important;
-	background-position: 50% 80% !important;
-
-	.login-form-forgot {
-		float: right;
-	}
-
-	.ant-col-rtl .login-form-forgot {
-		float: left;
-	}
-
-	.login-form-button {
-		width: 100%;
+		color: rgba(0, 0, 0, 0.5) !important;
 	}
 }
 
@@ -245,37 +300,21 @@ p {
 		object-position: 50% 30%;
 	}
 
-	p {
-		font-size: 14px !important;
+	h4 {
+		font-weight: bold;
+		font-size: 20px;
 	}
 
 	a {
-		position: relative;
-		padding: 0 0.5em;
-		color: #fff;
-		display: inline-block;
-		z-index: 3;
+		font-size: 12px;
+	}
+}
 
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 50%;
-			background-color: #000;
-			z-index: -10;
-			-webkit-transition: all 0.1s linear;
-			-moz-transition: all 0.1s linear;
-			transition: all 0.1s linear;
-		}
-
-		&:hover {
-			cursor: pointer;
-			&:after {
-				height: 100%;
-			}
-		}
+.latest-blog,
+.latest-opportunities {
+	p {
+		font-size: 14px !important;
+		margin-bottom: 0;
 	}
 }
 
@@ -529,17 +568,11 @@ p {
 		display: flex;
 		justify-content: center;
 	}
-
-	.ant-input:hover,
-	.ant-input:focus {
-		border-color: $pry-color;
-		box-shadow: none;
-	}
 }
 
 /**********************************************
 
-			SIGN UP PAGE
+			AUTHENTICATION PAGE
 
 ***********************************************/
 .auth-header {
@@ -560,22 +593,77 @@ p {
 		position: fixed;
 		background-size: cover !important;
 		background-position: 50% 10% !important;
+		left: 0;
+		top: 66px;
 	}
 
 	@media screen and (min-width: 768px) {
 		&__form {
 			position: absolute;
-			height: calc(100vh - 66px);
+			height: 100vh;
 			overflow: scroll;
 			left: 50%;
 		}
 	}
+
+	.ant-picker {
+		width: 100%;
+	}
 }
 
 .auth-footer {
-	position: relative;
-	
+	position: absolute;
+	z-index: 10;
+
 	@media screen and (min-width: 768px) {
 		top: 100vh;
+	}
+}
+
+.user-login {
+	background-attachment: fixed !important;
+	background-size: cover !important;
+	background-position: 50% 80% !important;
+
+	@media screen and (max-width: 767px) {
+		.registration__form {
+			height: 80vh;
+		}
+	}
+
+	.login-form-forgot {
+		float: right;
+	}
+
+	.ant-col-rtl .login-form-forgot {
+		float: left;
+	}
+
+	.login-form-button {
+		width: 100%;
+	}
+}
+
+/**********************************************
+
+					PROFILE
+
+***********************************************/
+.profile-details {
+	padding-top: 100px;
+
+	.background {
+		height: 150px;
+		margin-top: -50px;
+		background-size: cover !important;
+		background-position: 50% 30% !important;
+	}
+
+	.info {
+		img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+		}
 	}
 }
