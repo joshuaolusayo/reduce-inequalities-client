@@ -9,22 +9,22 @@ const LogInForm = () => {
 	};
 
 	return (
-		<div className="container-fluid registration user-login px-0 px-md-auto">
+		<div className="container-fluid registration user-login px-0 px-lg-auto">
 			<div className="row mx-0">
 				<div
-					className="col-md-6 d-none d-md-flex justify-content-center align-items-center fixed"
+					className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center fixed"
 					style={{
 						background:
-							'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/assets/man-with-phone.jpg")',
+							'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/lady-with-phone.jpg")',
 					}}
 				>
-					<h3 className="text-center">Fill the form to register and unlock the pathway to countless opportunities.</h3>
+					<h3 className="text-center text-light">Fill the form to register and unlock the pathway to countless opportunities.</h3>
 				</div>
 				<div
-					className="col-md-6 registration__form d-flex justify-content-center align-items-center"
-					style={{ background: 'linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)), url("/assets/globe-img.jpg")' }}
+					className="col-lg-6 registration__form d-flex justify-content-center bg-pry-light align-items-center"
+					// style={{ background: 'linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)), url("/assets/globe-img.jpg")' }}
 				>
-					<div className="col-sm-8 col-md-10">
+					<div className="col-sm-8 col-lg-10">
 						<Form
 							name="normal_login"
 							className="login-form"
@@ -71,6 +71,9 @@ const LogInForm = () => {
 								</Button>
 							</Form.Item>
 						</Form>
+						<p className="text-center">
+							Don't have an account? <Link to="/signup">Sign up</Link>
+						</p>
 					</div>
 				</div>
 			</div>

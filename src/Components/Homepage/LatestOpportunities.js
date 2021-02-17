@@ -39,7 +39,7 @@ const LatestOpportunities = () => {
 									className=""
 									innerElement="p"
 								/>
-								<Link className="half-filled-link" to="/" data-content="Read more">
+								<Link className="hover-left bg-white shadow-sm rounded px-2 py-1" to="/blog" data-content="Read more">
 									Read more
 								</Link>
 							</Col>
@@ -70,7 +70,7 @@ const LatestOpportunities = () => {
 									className=""
 									innerElement="p"
 								/>
-								<Link className="half-filled-link" to="/" data-content="Read more">
+								<Link className="hover-left bg-white shadow-sm rounded px-2 py-1" to="/blog" data-content="Read more">
 									Read more
 								</Link>
 							</Col>
@@ -101,7 +101,7 @@ const LatestOpportunities = () => {
 									className=""
 									innerElement="p"
 								/>
-								<Link className="half-filled-link" to="/" data-content="Read more">
+								<Link className="hover-left bg-white shadow-sm rounded px-2 py-1" to="/blog" data-content="Read more">
 									Read more
 								</Link>
 							</Col>
@@ -111,7 +111,7 @@ const LatestOpportunities = () => {
 
 					<Col xs={24} md={20} lg={8} className="pl-lg-3 text-justify mt-5 mt-lg-0 latest-opportunities">
 						<h3 className="font-weight-bold mb-4 mb-lg-5">LATEST OPPORTUNITIES</h3>
-						<Link className="d-block" to="/">
+						<Link className="d-block" to="/scholarship">
 							<Card className="text-pry">
 								<ClampLines
 									text={
@@ -126,7 +126,7 @@ const LatestOpportunities = () => {
 								/>
 							</Card>
 						</Link>
-						<Link className="d-block" to="/">
+						<Link className="d-block" to="/empowerment">
 							<Card className="text-pry">
 								<ClampLines
 									text={
@@ -141,7 +141,7 @@ const LatestOpportunities = () => {
 								/>
 							</Card>
 						</Link>
-						<Link className="d-block" to="/">
+						<Link className="d-block" to="/job">
 							<Card className="text-pry">
 								<ClampLines
 									text={

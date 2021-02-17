@@ -10,7 +10,7 @@ const Jobs = () => {
 			<div className="container mx-auto mb-5 px-0">
 				<h3 className="font-weight-bold">Jobs</h3>
 				<Row className="justify-content-between">
-					<div className="card border-0 shadow-sm mb-4">
+					<div className="card border-0 shadow-sm mb-4 mb-lg-5">
 						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
 						<div className="card-body">
@@ -47,7 +47,7 @@ const Jobs = () => {
 						</div>
 					</div>
 
-					<div className="card border-0 shadow-sm mb-4">
+					<div className="card border-0 shadow-sm mb-4 mb-lg-5">
 						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
 						<div className="card-body">
@@ -84,7 +84,7 @@ const Jobs = () => {
 						</div>
 					</div>
 
-					<div className="card border-0 shadow-sm mb-4">
+					<div className="card border-0 shadow-sm mb-4 mb-lg-5">
 						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
 						<div className="card-body">
@@ -121,7 +121,7 @@ const Jobs = () => {
 						</div>
 					</div>
 
-					<div className="card border-0 shadow-sm mb-4">
+					<div className="card border-0 shadow-sm mb-4 mb-lg-5">
 						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
 						<div className="card-body">
@@ -158,7 +158,7 @@ const Jobs = () => {
 						</div>
 					</div>
 
-					<div className="card border-0 shadow-sm mb-4">
+					<div className="card border-0 shadow-sm mb-4 mb-lg-5">
 						<img loading="lazy" className="card-img-top img_1" src="/assets/env.jpg" alt="alternative to be displayed" />
 
 						<div className="card-body">

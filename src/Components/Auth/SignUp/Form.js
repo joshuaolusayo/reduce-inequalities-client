@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Form, Input, Tooltip, Select, Checkbox, Button, DatePicker } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 
@@ -33,16 +34,6 @@ const tailFormItemLayout = {
 			offset: 8,
 		},
 	},
-};
-
-const config = {
-	rules: [
-		{
-			type: "object",
-			required: true,
-			message: "Please select time!",
-		},
-	],
 };
 
 const RegistrationForm = () => {
@@ -95,14 +86,14 @@ const RegistrationForm = () => {
 		<div className="container-fluid registration px-0">
 			<div className="row mx-0">
 				<div
-					className="col-md-6 d-none d-md-flex justify-content-center align-items-center fixed"
+					className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center fixed"
 					style={{
 						background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/man-with-phone.jpg")',
 					}}
 				>
 					<h3 className="text-center text-light">Fill the form to register and unlock the pathway to countless opportunities.</h3>
 				</div>
-				<div className="col-md-6 registration__form">
+				<div className="col-lg-6 registration__form bg-pry-light pb-lg-5">
 					<Form
 						{...formItemLayout}
 						form={form}
@@ -111,7 +102,7 @@ const RegistrationForm = () => {
 						initialValues={{
 							prefix: "234",
 						}}
-						className="py-5"
+						className="pt-5"
 						scrollToFirstError
 					>
 						<Form.Item
@@ -289,6 +280,9 @@ const RegistrationForm = () => {
 							</Button>
 						</Form.Item>
 					</Form>
+					<p className="text-center mb-5">
+						Already have an account? <Link to="/login">Log in</Link>
+					</p>
 				</div>
 			</div>
 		</div>

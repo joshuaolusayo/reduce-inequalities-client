@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import Header from "../../Reusable/Header";
 import Details from "../Details";
 import Review from "../../Reusable/Review";
@@ -8,7 +9,6 @@ import BackToTop from "../../Reusable/BackToTop";
 const Empowerment = () => {
     const [location] = useState(window.location.href);
 	useEffect(() => {
-		console.log(location);
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",

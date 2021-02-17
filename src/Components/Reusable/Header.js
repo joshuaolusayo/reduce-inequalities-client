@@ -62,7 +62,7 @@ const Header = () => {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div className="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
-						<ul className="navbar-nav mr-auto mt-lg-0 justify-content-lg-center justify-content-lg-end align-items-lg-center w-100 h-100">
+						<ul className="navbar-nav mr-auto mt-lg-0 justify-content-lg-end align-items-lg-center w-100 h-100">
 							<li className="nav-item active">
 								<Link className="nav-link active mx-lg-4 py-4 text-pry" to="/">
 									Homepage

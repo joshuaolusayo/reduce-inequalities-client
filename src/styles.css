@@ -9,6 +9,30 @@ body {
   background: white;
 }
 
+@media screen and (min-width: 1920px) {
+  body {
+    font-size: 120% !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1250px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1700px !important;
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  .container {
+    max-width: 2100px !important;
+  }
+}
+
 *::selection {
   background: #008000;
   color: #fff;
@@ -58,34 +82,6 @@ a {
 
 a:hover {
   color: #06a800;
-}
-
-a.half-filled-link {
-  position: relative;
-  padding: 0 0.5em;
-  color: #fff;
-  display: inline-block;
-  z-index: 3;
-}
-
-a.half-filled-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: #008000;
-  z-index: -10;
-  transition: all 0.1s linear;
-}
-
-a.half-filled-link:hover {
-  cursor: pointer;
-}
-
-a.half-filled-link:hover:after {
-  height: 100%;
 }
 
 @keyframes left {
@@ -485,6 +481,30 @@ p {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 380px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  .scholarships .card,
+  .empowerments .card,
+  .jobs .card {
+    max-width: 480px;
+  }
+}
+
 .scholarships img,
 .empowerments img,
 .jobs img {
@@ -565,16 +585,16 @@ p {
 }
 
 .registration .fixed {
-  height: calc(100vh - 66px);
+  height: 100vh;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   background-size: cover !important;
   background-position: 50% 10% !important;
   left: 0;
   top: 66px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .registration__form {
     position: absolute;
     height: 100vh;
@@ -592,7 +612,7 @@ p {
   z-index: 10;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .auth-footer {
     top: 100vh;
   }
@@ -604,7 +624,7 @@ p {
   background-position: 50% 80% !important;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .user-login .registration__form {
     height: 80vh;
   }
@@ -629,6 +649,13 @@ p {
 ***********************************************/
 .profile-details {
   padding-top: 100px;
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 992px) {
+  .profile-details {
+    margin-bottom: 100px;
+  }
 }
 
 .profile-details .background {
@@ -636,6 +663,10 @@ p {
   margin-top: -50px;
   background-size: cover !important;
   background-position: 50% 30% !important;
+}
+
+.profile-details .background h3 {
+  line-height: 150px;
 }
 
 .profile-details .info img {

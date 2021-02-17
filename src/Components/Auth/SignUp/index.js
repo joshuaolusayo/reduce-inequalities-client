@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import Header from "../Header";
 import RegistrationForm from "./Form";
 import Footer from "../Footer";
@@ -14,7 +15,7 @@ const UserSignUp = () => {
 	
 	return (
 		<div>
-			<Header />
+			<Header route={"signup"} />
 			<RegistrationForm />
 			<Footer />
 		</div>
