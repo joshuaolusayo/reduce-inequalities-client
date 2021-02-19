@@ -71,9 +71,6 @@ const LogInForm = () => {
 								</Button>
 							</Form.Item>
 						</Form>
-						<p className="text-center">
-							Don't have an account? <Link to="/signup">Sign up</Link>
-						</p>
 					</div>
 				</div>
 			</div>

@@ -13,6 +13,9 @@ import Scholarship from "./Components/Application/Scholarship";
 import Empowerment from "./Components/Application/Empowerment";
 import Job from "./Components/Application/Job";
 import Profile from "./Components/Profile";
+import AdminLogin from "./Components/Admin/Login";
+import Dashboard from "./Components/Admin/Dashboard"
+import UserDetails from "./Components/Admin/User"
 
 import "antd/dist/antd.css";
 import "./styles.css";
@@ -29,6 +32,9 @@ ReactDOM.render(
 			<Route exact path="/empowerment" component={Empowerment} />
 			<Route exact path="/job" component={Job} />
 			<Route exact path="/profile" component={Profile} />
+			<Route exact path="/admin/login" component={AdminLogin} />
+			<Route exact path="/admin/dashboard" component={Dashboard} />
+			<Route exact path="/admin/user" component={UserDetails} />
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")

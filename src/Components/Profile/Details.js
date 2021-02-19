@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Col } from "antd";
+import ProfileInfo from "./ProfileInfo";
 
 const Details = () => {
 	return (
@@ -27,6 +28,7 @@ const Details = () => {
 					<div className="account-details">
 						<h4 className="font-weight-bold">Account Details</h4>
 						<hr />
+						<ProfileInfo />
 					</div>
 				</Col>
 			</Row>

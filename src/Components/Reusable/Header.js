@@ -17,7 +17,7 @@ const Header = () => {
 	};
 
 	const checkResize = () => {
-		if (document.documentElement.clientWidth >= 992 && body.style.overflow == "hidden") {
+		if (document.documentElement.clientWidth >= 992 && body.style.overflow === "hidden") {
 			body.style.overflow = "scroll";
 			setClicked(false);
 		}
@@ -108,6 +108,9 @@ const Header = () => {
 								<div className="dropdown-menu" aria-labelledby="profileId">
 									<Link className="dropdown-item" to="/profile">
 										View Profile
+									</Link>
+									<Link className="dropdown-item" to="/admin/dashboard">
+										Dashboard
 									</Link>
 									<Link className="dropdown-item" to="/">
 										Logout

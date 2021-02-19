@@ -22,11 +22,11 @@ body {
 	@media screen and (min-width: 1440px) {
 		max-width: 1250px !important;
 	}
-	
+
 	@media screen and (min-width: 1920px) {
 		max-width: 1700px !important;
 	}
-	
+
 	@media screen and (min-width: 2300px) {
 		max-width: 2100px !important;
 	}
@@ -531,15 +531,15 @@ p {
 		@media screen and (min-width: 1200px) {
 			max-width: 350px;
 		}
-		
+
 		@media screen and (min-width: 1440px) {
 			max-width: 380px;
 		}
-		
+
 		@media screen and (min-width: 1920px) {
 			max-width: 450px;
 		}
-		
+
 		@media screen and (min-width: 2300px) {
 			max-width: 480px;
 		}
@@ -618,19 +618,19 @@ p {
 	padding-top: 66px;
 
 	.fixed {
-		height: 100vh;
+		height: 80vh;
 		overflow: hidden;
 		position: absolute;
 		background-size: cover !important;
 		background-position: 50% 10% !important;
 		left: 0;
-		top: 66px;;
+		top: 66px;
 	}
 
 	@media screen and (min-width: 992px) {
 		&__form {
 			position: absolute;
-			height: 100vh;
+			height: 80vh;
 			overflow: scroll;
 			left: 50%;
 		}
@@ -646,7 +646,7 @@ p {
 	z-index: 10;
 
 	@media screen and (min-width: 992px) {
-		top: 100vh;
+		top: 80vh;
 	}
 }
 
@@ -657,7 +657,7 @@ p {
 
 	@media screen and (max-width: 991px) {
 		.registration__form {
-			height: 80vh;
+			height: 50vh;
 		}
 	}
 
@@ -682,7 +682,7 @@ p {
 .profile-details {
 	padding-top: 100px;
 	margin-bottom: 80px;
-	
+
 	@media screen and (min-width: 992px) {
 		margin-bottom: 100px;
 	}
@@ -703,6 +703,123 @@ p {
 			width: 100px;
 			height: 100px;
 			object-fit: cover;
+		}
+	}
+
+	.profile__info {
+		.ant-btn {
+			&:hover,
+			&:focus {
+				color: $pry-color;
+				border-color: $pry-color;
+			}
+		}
+	}
+}
+
+/**********************************************
+
+				CREATE POST
+
+***********************************************/
+.create-post {
+	.auth-header {
+		top: 0;
+	}
+
+	.menu {
+		position: relative;
+
+		.menu__bar > a.active {
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+			border-radius: 10px;
+			background: $pry-color;
+		}
+
+		.menu__bar > a,
+		.dropdown {
+			&:hover,
+			&:focus {
+				box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+				border-radius: 10px;
+				background: $pry-color;
+				color: #fff;
+			}
+
+			&:active,
+			&.active {
+				background: $pry-color;
+				color: #fff;
+			}
+		}
+
+		.dropdown-toggle:focus {
+			box-shadow: none;
+		}
+
+		.abs {
+			position: fixed;
+			left: 0;
+			z-index: 10;
+			top: 66px;
+		}
+
+		button:hover {
+			color: #fff !important;
+		}
+
+		button:focus {
+			box-shadow: none;
+			color: #fff !important;
+		}
+
+		@media screen and (max-width: 991px) {
+			.p-abs {
+				position: fixed;
+				height: 100vh;
+				width: 100%;
+				left: 0;
+				top: 66px;
+				z-index: 50;
+				overflow: hidden;
+				background: #fff;
+				color: $pry-color;
+				padding: 20px 0;
+
+				.menu__bar > a,
+				.dropdown {
+					&:hover {
+						box-shadow: none !important;
+						color: #fff !important;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			border-right: 1px solid $pry-color;
+			min-height: calc(100vh - 66px);
+			position: relative;
+			top: 70px;
+			overflow-y: hidden;
+		}
+	}
+
+	.content {
+		position: relative;
+	}
+
+	.dashboard {
+		right: 0;
+		position: relative;
+		top: 70px;
+
+		@media screen and (max-width: 991px) {
+			top: 100px;
+		}
+
+		.num {
+			font-size: 35px;
 		}
 	}
 }
