@@ -1,11 +1,26 @@
 import React from "react";
-import { Form, Input, Checkbox, Button } from "antd";
 import { Link } from "react-router-dom";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+
+import axios from "axios";
 
 const LogInForm = () => {
-	const onFinish = (values) => {
-		console.log("Received values of form: ", values);
+	const onFinish = async (values) => {
+		axios
+			.post("http://localhost:5000/auth/login", values)
+			.then((res) => {
+				const user = res.data.user;
+				localStorage.setItem("token", JSON.stringify(res.data.token));
+				localStorage.setItem("user_payload", JSON.stringify(user));
+				console.log(localStorage);
+
+				if (user) {
+					localStorage.setItem("isAuthenticated", true);
+					window.location.pathname = "/";
+				}
+			})
+			.catch((err) => alert(err));
 	};
 
 	return (
@@ -14,63 +29,56 @@ const LogInForm = () => {
 				<div
 					className="col-lg-6 d-none d-lg-flex justify-content-center align-items-center fixed"
 					style={{
-						background:
-							'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/lady-with-phone.jpg")',
+						background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/lady-with-phone.jpg")',
 					}}
 				>
 					<h3 className="text-center text-light">Fill the form to register and unlock the pathway to countless opportunities.</h3>
 				</div>
-				<div
-					className="col-lg-6 registration__form d-flex justify-content-center bg-pry-light align-items-center"
-					// style={{ background: 'linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.9)), url("/assets/globe-img.jpg")' }}
-				>
+				<div className="col-lg-6 registration__form d-flex justify-content-center bg-pry-light align-items-center">
 					<div className="col-sm-8 col-lg-10">
-						<Form
-							name="normal_login"
-							className="login-form"
-							initialValues={{
-								remember: true,
+						<Formik
+							initialValues={{ email: "", password: "" }}
+							validationSchema={Yup.object({
+								email: Yup.string().email("Invalid email address").required("Required"),
+								password: Yup.string().required("Enter your password"),
+							})}
+							onSubmit={(values, { setSubmitting }) => {
+								console.log(values);
+								onFinish(values);
+								setSubmitting(false);
 							}}
-							onFinish={onFinish}
 						>
-							<Form.Item
-								name="username"
-								rules={[
-									{
-										required: true,
-										message: "Please input your Username!",
-									},
-								]}
-							>
-								<Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
-							</Form.Item>
-							<Form.Item
-								name="password"
-								rules={[
-									{
-										required: true,
-										message: "Please input your Password!",
-									},
-								]}
-							>
-								<Input prefix={<LockOutlined className="site-form-item-icon" />} type="password" placeholder="Password" />
-							</Form.Item>
-							<Form.Item>
-								<Form.Item name="remember" valuePropName="checked" noStyle>
-									<Checkbox className="text-dark">Remember me</Checkbox>
-								</Form.Item>
+							<Form>
+								<div className="mb-3">
+									<Field name="email" type="email" className="w-100 border-0 px-3 rounded py-1" placeholder="Email" />
+									<br />
+									<span className="text-danger">
+										<ErrorMessage name="email" />
+									</span>
+								</div>
 
-								<Link to="/login" className="login-form-forgot">
+								<div className="mb-3">
+									<Field
+										name="password"
+										type="password"
+										className="w-100 border-0 px-3 rounded py-1"
+										placeholder="Password"
+									/>
+									<br />
+									<span className="text-danger">
+										<ErrorMessage name="password" />
+									</span>
+								</div>
+
+								<Link to="/login" className="login-form-forgot mb-2">
 									Forgot password
 								</Link>
-							</Form.Item>
 
-							<Form.Item>
-								<Button type="primary" htmlType="submit" className="login-form-button">
+								<button type="submit" className="login-form-button btn bg-pry text-white">
 									Log in
-								</Button>
-							</Form.Item>
-						</Form>
+								</button>
+							</Form>
+						</Formik>
 						<p className="text-center">
 							Don't have an account? <Link to="/signup">Sign up</Link>
 						</p>

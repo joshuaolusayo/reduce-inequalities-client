@@ -42,7 +42,7 @@ const Menu = () => {
 					className={`mb-lg-4 w-100 py-3 d-flex align-items-center ${
 						location.pathname === "/admin/article" ? "active" : ""
 					}`}
-					to="/admin/dashboard"
+					to="/admin/article"
 				>
 					<ReadOutlined className="col-2 col-lg-3" />
 					<span className="col-10 col-lg-9">Articles</span>

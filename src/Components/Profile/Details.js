@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Row, Col } from "antd";
 import ProfileInfo from "./ProfileInfo";
 
@@ -19,9 +18,9 @@ const Details = () => {
 						<img className="logo rounded-circle img-thumbnail" loading="lazy" src="/assets/smiling-kid-1.jpg" alt="passport" />
 						<h4 className="mt-3 font-weight-bold mb-0">Kola Kelvin</h4>
 						<p className="text-muted">Student</p>
-						<Link to="/profile" className="hover-left">
+						<button className="hover-left">
 							Log out
-						</Link>
+						</button>
 					</div>
 				</Col>
 				<Col xs={24} md={20} lg={17} className="bg-light shadow px-3 pt-5 pb-3 py-lg-5 rounded-top mx-md-auto">

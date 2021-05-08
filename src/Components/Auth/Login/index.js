@@ -4,8 +4,9 @@ import Header from "../Header";
 import LogInForm from "./Form";
 import Footer from "../Footer";
 
-const UserLogIn = () => {
+const UserLogIn = (props) => {
 	const [location] = useState(window.location.href);
+
 	useEffect(() => {
 		window.scrollTo({
 			top: 0,
@@ -16,7 +17,7 @@ const UserLogIn = () => {
 	return (
 		<div>
 			<Header route={"login"} />
-			<LogInForm />
+			<LogInForm setAuth={props.setAuth} />
 			<Footer />
 		</div>
 	);

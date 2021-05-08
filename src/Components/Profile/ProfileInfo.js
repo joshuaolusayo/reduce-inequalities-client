@@ -59,8 +59,8 @@ const ProfileInfo = () => {
 				</Col>
 				<Col className="col-12 col-md-6 col-xl-4">
 					<Form.Item
-						name="username"
-						label="username"
+						name="field"
+						label="field"
 						rules={[
 							{
 								required: true,
@@ -73,8 +73,8 @@ const ProfileInfo = () => {
 				</Col>
 				<Col className="col-12 col-md-6 col-xl-4">
 					<Form.Item
-						name="email"
-						label="email"
+						name="age"
+						label="age"
 						rules={[
 							{
 								required: true,
@@ -87,50 +87,8 @@ const ProfileInfo = () => {
 				</Col>
 				<Col className="col-12 col-md-6 col-xl-4">
 					<Form.Item
-						name="phone number"
-						label="phone number"
-						rules={[
-							{
-								required: true,
-								message: "Input something!",
-							},
-						]}
-					>
-						<Input placeholder="placeholder" disabled={disabled} />
-					</Form.Item>
-				</Col>
-				<Col className="col-12 col-md-6 col-xl-4">
-					<Form.Item
-						name="username"
-						label="username"
-						rules={[
-							{
-								required: true,
-								message: "Input something!",
-							},
-						]}
-					>
-						<Input placeholder="placeholder" disabled={disabled} />
-					</Form.Item>
-				</Col>
-				<Col className="col-12 col-md-6 col-xl-4">
-					<Form.Item
-						name="email"
-						label="email"
-						rules={[
-							{
-								required: true,
-								message: "Input something!",
-							},
-						]}
-					>
-						<Input placeholder="placeholder" disabled={disabled} />
-					</Form.Item>
-				</Col>
-				<Col className="col-12 col-md-6 col-xl-4">
-					<Form.Item
-						name="phone number"
-						label="phone number"
+						name="dfs"
+						label="dfs"
 						rules={[
 							{
 								required: true,

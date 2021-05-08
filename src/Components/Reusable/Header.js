@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 let body = document.documentElement;
@@ -9,9 +9,9 @@ const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 
 	const checkScroll = () => {
-		if (!scrolled && window.pageYOffset > 300) {
+		if (!scrolled && window.pageYOffset > 500) {
 			setScrolled(true);
-		} else if (scrolled && window.pageYOffset <= 300) {
+		} else if (scrolled && window.pageYOffset <= 500) {
 			setScrolled(false);
 		}
 	};
@@ -21,6 +21,11 @@ const Header = () => {
 			body.style.overflow = "scroll";
 			setClicked(false);
 		}
+	};
+
+	const handleLogOut = () => {
+		localStorage.clear();
+		window.location.pathname = "/login";
 	};
 
 	useEffect(() => {
@@ -36,7 +41,7 @@ const Header = () => {
 		return () => {
 			body.style.overflow = "scroll";
 			window.removeEventListener("scroll", checkScroll);
-			window.removeEventListener('resize', checkResize);
+			window.removeEventListener("resize", checkResize);
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [clicked, scrolled, window.location.href]);
@@ -63,15 +68,15 @@ const Header = () => {
 					</button>
 					<div className="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
 						<ul className="navbar-nav mr-auto mt-lg-0 justify-content-lg-end align-items-lg-center w-100 h-100">
-							<li className="nav-item active">
-								<Link className="nav-link active mx-lg-4 py-4 text-pry" to="/">
+							<li className="nav-item">
+								<NavLink className="nav-link mx-lg-4 py-4" to="/" activeClassName="active text-pry">
 									Homepage
-								</Link>
+								</NavLink>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link mx-lg-4 py-4" to="/blog">
+								<NavLink className="nav-link mx-lg-4 py-4" activeClassName="active text-pry" to="/blog">
 									Blog
-								</Link>
+								</NavLink>
 							</li>
 							<li className="nav-item dropdown text-lg-auto">
 								<button
@@ -112,9 +117,9 @@ const Header = () => {
 									<Link className="dropdown-item" to="/admin/dashboard">
 										Dashboard
 									</Link>
-									<Link className="dropdown-item" to="/">
+									<button className="btn dropdown-item" href="#" onClick={handleLogOut}>
 										Logout
-									</Link>
+									</button>
 								</div>
 							</li>
 						</ul>

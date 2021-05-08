@@ -313,7 +313,7 @@ p {
 
 .latest-blog {
 	img {
-		height: 120px;
+		height: 125px;
 		object-fit: cover;
 		object-position: 50% 30%;
 	}
@@ -705,14 +705,14 @@ p {
 			object-fit: cover;
 		}
 	}
+}
 
-	.profile__info {
-		.ant-btn {
-			&:hover,
-			&:focus {
-				color: $pry-color;
-				border-color: $pry-color;
-			}
+.profile__info {
+	.ant-btn {
+		&:hover,
+		&:focus {
+			color: $pry-color;
+			border-color: $pry-color;
 		}
 	}
 }

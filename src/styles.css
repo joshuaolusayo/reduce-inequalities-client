@@ -281,7 +281,7 @@ p {
 
 ************************/
 .latest-blog img {
-  height: 120px;
+  height: 125px;
   object-fit: cover;
   object-position: 50% 30%;
 }
@@ -675,7 +675,7 @@ p {
   object-fit: cover;
 }
 
-.profile-details .profile__info .ant-btn:hover, .profile-details .profile__info .ant-btn:focus {
+.profile__info .ant-btn:hover, .profile__info .ant-btn:focus {
   color: #008000;
   border-color: #008000;
 }
